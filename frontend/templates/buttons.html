@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        button {
+            border: none;
+            height: 37px;
+            cursor: pointer;
+            margin: 10px;
+            transition: opacity 1s;
+        }
+        button.subscribe {
+            background-color: rgb(255, 44, 44);
+            color: white;
+            width: 100px;
+            border-radius: 3px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        button.subscribe:hover {
+            background-color: rgb(163, 4, 4);
+            opacity: 50%;
+            transition: opacity 1s;
+        }
+
+        button.subscribe:active {
+            /* background-color: black; */
+            opacity: 100%;
+        }
+
+        button.join {
+            width: 50px;
+            background-color: white;
+            color: blue;
+            border-color: blue;
+            border-radius: 3px;
+            border-style: solid;
+            border-width: 1px;
+            transition: color 2s, opacity 2s;
+        }
+        button.join:hover {
+            background-color: rgb(0, 7, 39);
+            color: white;
+            opacity: 70%;
+        }
+        button.join:active {
+            opacity: 100%;
+        }
+
+
+        button.tweet {
+            background-color: rgb(34, 122, 255);
+            color: white;
+            width: 60px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+            transition: opacity 2s, box-shadow 3s;
+
+        }
+        button.tweet:hover {
+            opacity: 80%;
+
+            transition: opacity 0.5s;
+        }
+        button.tweet:active {
+            opacity: 60%;
+        }
+    </style>
+
+  </head>
+  <body>
+    <header></header>
+
+    <button class="subscribe">SUBSCRIBE</button>
+    <button class="join">JOIN</button>
+    <button class="tweet">Tweet</button>
+
+    <footer></footer>
+  </body>
+</html>

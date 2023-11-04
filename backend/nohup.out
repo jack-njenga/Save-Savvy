@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/projects/Savy-Savvy/backend/api/v1/app.py", line 10, in <module>
+    from flask import Flask, render_template, make_response, jsonify
+  File "/projects/Savy-Savvy/venv/lib/python3.10/site-packages/flask/__init__.py", line 7, in <module>
+    from .app import Flask as Flask
+  File "/projects/Savy-Savvy/venv/lib/python3.10/site-packages/flask/app.py", line 27, in <module>
+    from . import cli
+  File "/projects/Savy-Savvy/venv/lib/python3.10/site-packages/flask/cli.py", line 17, in <module>
+    from .helpers import get_debug_flag
+  File "/projects/Savy-Savvy/venv/lib/python3.10/site-packages/flask/helpers.py", line 14, in <module>
+    from werkzeug.urls import url_quote
+ImportError: cannot import name 'url_quote' from 'werkzeug.urls' (/projects/Savy-Savvy/venv/lib/python3.10/site-packages/werkzeug/urls.py)

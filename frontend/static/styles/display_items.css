@@ -1,0 +1,22 @@
+div.parent-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+section.all-items {
+    flex: 1;
+    display: flex;
+    background: rgb(232, 233, 227);
+    justify-content: start;
+    align-items: normal;
+    padding: 10px 10px;
+}
+
+section article.item {
+    position: relative;
+    width: 50px;
+    height: 100px;
+    background: rgb(151, 201, 245);
+    padding: 10px 10px;
+}

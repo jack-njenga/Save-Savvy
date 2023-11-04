@@ -1,0 +1,100 @@
+header {
+    display: grid;
+    grid-template-columns: 15% 65% 1fr;
+    /* height: 100px; */
+    border: 1px solid rgb(209, 209, 209);
+    /* display: flex; */
+}
+
+header * {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: 600;
+}
+
+:root {
+    --default_gradient: linear-gradient(
+        180deg,
+        #d1e4e7,
+        #00b5fd
+    );
+    --normal_gradient: linear-gradient(
+        180deg,
+        rgb(237, 255, 232),
+        rgb(125, 230, 26)
+    );
+    --abnornal_gradient: linear-gradient(
+        45deg,
+        rgb(172, 3, 3),
+        rgb(212, 79, 79),
+        rgb(125, 230, 26)
+    );
+}
+header,
+header.default {
+    background-image: var(--default_gradient);
+}
+header.normal {
+    background-image: var(--normal_gradient);
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .logo img {
+    display: inline-block;
+    width: 80px;
+    border-radius: 50%;
+    margin: 10px 10px;
+    object-fit: contain;
+    /* border: 2px solid red; */
+}
+.logo img#not-ready {
+    box-shadow: 0px 10px 20px rgb(255, 10, 10);
+}
+.logo img#ready {
+    box-shadow: 0px 10px 20px greenyellow;
+}
+
+
+.actions button, .actions a {
+    padding: 10px;
+    margin: 30px;
+    opacity: 80%;
+    color: rgb(28, 58, 28);
+}
+
+.accounts button {
+    border-radius: 20px;
+    padding: 10px;
+    width: 80px;
+    background-image: var(--abnornal_gradient);
+    background-size: 600%;
+    background-position: bottom;
+    transition: background-position 1.5s;
+    cursor: pointer;
+}
+.accounts button:hover {
+    background-position: right;
+}
+
+div.logged-in {
+    width: 100px;
+    /* margin-left: 50px; */
+    /* border: 2px solid red; */
+    display: none;
+}
+div.logged-in img {
+    width: 80px;
+    border-radius: 50%;
+    border: 3px solid rgb(82, 110, 36);
+    margin: 5px;
+    transition: border 1s;
+}
+div.logged-in img:hover {
+    cursor: pointer;
+    border: 3px solid rgb(250, 0, 0);
+}

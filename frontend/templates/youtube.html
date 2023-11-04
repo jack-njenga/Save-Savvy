@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .search {
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            border: 1px solid red;
+            object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+
+        .preview {
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            border: 2px solid rgb(47, 255, 47);
+        }
+        .prof-pic {
+            width: 50px;
+            display: inline-block;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px 10px;
+            vertical-align: top;
+            border: 3px solid rgb(255, 137, 27);
+        }
+        .video-info {
+            display: inline-block;
+            width: 210px;
+
+
+            .video-title{
+                margin: 10px 0px;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+            .author,
+            .stats {
+                margin: 0px 0px;
+                margin-top: 5px;
+                color: gray;
+            }
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <input type="text" placeholder="Serch" class="search">
+
+
+    <div class="preview">
+        <div class="video-img">
+            <img src="yt_images/img-1" alt="">
+        </div>
+
+        <img src="yt_images/prof-1.jpg" class="prof-pic">
+
+        <div class="video-info">
+            <p class="video-title">
+                HTML & CSS Full Course - Beginner to Pro sadf
+            </p>
+            <p class="author">
+                SuperSimpleDev
+            </p>
+            <p class="stats">
+                6.7M views &#183; 1 year ago
+            </p>
+        </div>
+
+
+    </div>
+
+    <div class="preview">
+        <img src="yt_images/img-2.jpg" alt="">
+
+        <p class="video-title">
+            Mix – In Search For Meaning
+        </p>
+        <p class="author">
+            Search For Meaning
+        </p>
+        <p class="stats">
+            3.7M views &#183; 2 days ago
+        </p>
+    </div>
+
+</body>
+</html>

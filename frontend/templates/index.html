@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/styles/body.css" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/common.css">
+  </head>
+  <body>
+    <header class="default">
+      <div class="logo">
+        <img src="../static/images/logo_1.jpg" id="not-ready"/>
+      </div>
+      <div class="actions">
+        <a href="">SERVICES</a>
+        <a href="">PRODUCTS</a>
+        <a href="">MORE</a>
+      </div>
+
+      <div class="accounts">
+        <button onclick="start()" id="red-signin">Sign In</button>
+      </div>
+      <div class="logged-in">
+        <img src="../static/images/other.png">
+        <b id="user-name"></b>
+      </div>
+    </header>
+
+    <div class="in-body">
+        <div class="core_values">
+          <h1>Guiding Sales Decisions with Price Tracking</h1>
+        </div>
+
+        <!-- START -->
+        <div class="start">
+          <button id="start" onclick="start()">START</button>
+
+          <div id="signin-form">
+
+            <form id="signin-choice" style="display: none;">
+              <h3>Choose One To Proceed</h3>
+              <button id="start-signin">Sign In</button>
+              <button id="start-create-account">Create Account</button>
+              <br>
+              <br>
+              <button id="start-skip">Skip</button>
+            </form>
+
+            <form id="create-account" style="display: none;">
+              <h3>Create Account</h3>
+              <label for="first_name">First Name:</label>
+              <input type="text" id="first_name"          placeholder="Jack">
+              <br>
+              <label for="last_name">Last Name:</label>
+              <input type="text" id="Last_name" placeholder="Njenga">
+              <br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" placeholder="jacknjenga99@gmail.com">
+              <br>
+              <label for="dob">Birth Date:</label>
+              <input type="date" id="dob" placeholder="22/06/2002">
+              <br>
+              <label for="gender">Gender:</label>
+              <select name="gender" id="gender">
+                <option value="nan">Rather Not Say</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="lgbtq">LGBTQ</option>
+                <option value="other">Other</option>
+              </select>
+              <br>
+              <label for="password">New Password:</label>
+              <input type="password" id="password" name="password">
+              <br>
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" name="password">
+              <br>
+              <button id="Finish">Finish</button>
+            </form>
+            <div class="success-popup">
+              <img src="../static/images/success.jpeg" alt="">
+              <h2>Thank You!</h2>
+              <h3>Account Created</h3>
+              <button type="button", id="sign-now">Sign In Now</button>
+            </div>
+
+            <form id="sign-in" style="display: none;">
+              <h3>Sign In</h3>
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required>
+              <br>
+              <label for="pwd">Password:</label>
+              <input type="password" id="pwd" name="pwd" required>
+              <br>
+              <button id="signin">Sign In</button>
+            </form>
+
+        </div>
+
+        <div class="social-proofs">
+          <h1>Social Proofs</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elsi sunt, asperiores, dolores incidunt explicabo facilis ad!</h3>
+        </div>
+
+      </div>
+
+
+    <footer>
+      <div>
+        <a href="/about">ABOUT US</a>
+      </div>
+      <div>
+        <a href="">&copy; All Rights Reverved</a>
+      </div>
+      <div>
+        <a href="./about">CONTACT US</a>
+      </div>
+    </footer>
+    <script src="../static/scripts/common.js"></script>
+    <script src="../static/scripts/login.js"></script>
+    <script src="../static/scripts/start.js"></script>
+  </body>
+</html>

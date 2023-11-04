@@ -1,0 +1,26 @@
+section  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+section img#me {
+    width: 35%;
+    border-radius: 50%;
+    object-fit: contain;
+}
+article {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+article * {
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

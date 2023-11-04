@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>savvy items</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/styles/body.css" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/header.css" />
+    <link rel="stylesheet" type="text/css" href="../static/styles/common.css" />
+    <link rel="stylesheet" href="../static/styles/display_item.css" />
+    <link rel="stylesheet" href="../static/styles/item_analysis.css">
+  </head>
+  <body>
+    <header class="default">
+      <div class="logo">
+        <img src="../static/images/logo_1.jpg" id="not-ready" />
+      </div>
+      <div class="actions">
+        <a href="http://164.90.136.53:5000">HOME</a>
+      </div>
+
+      <div class="accounts">
+        <button onclick="start()" id="red-signin">Sign In</button>
+      </div>
+      <div class="logged-in">
+        <img src="../static/images/other.png" />
+        <b id="user-name"></b>
+      </div>
+    </header>
+
+    <div class="body">
+      <div class="items">
+
+        <div class="filter">
+            <h2>Customize Your Analysis</h2>
+            <div class="analysis-filter">
+              Filter by:
+              <select name="" id="filter-option">
+                <option value="default">Default</option>
+                <option value="minute">Minutes</option>
+                <option value="hour">Hours</option>
+                <option value="day">Days</option>
+                <option value="month">Months</option>
+                <option value="year">Years</option>
+              </select>
+            </div>
+        </div>
+
+        <div class="analysis">
+          <h2>Analysis</h2>
+          <div class="price-time-fig">
+            <img src="{{ fig_path }}" alt="" id="price-lineplot"/>
+            <img src="{{ voilin }}" alt="" id="price-violin"/>
+          </div>
+          <!-- <div class="price-time-fig">
+              <img src="../static/figures/price_over_time_fig_chairs.png" alt="">
+            </div> -->
+        </div>
+
+        <div>
+          <h2>All ({{ (items[0].type).replace("+", " ") }}) Items</h2>
+        </div>
+
+        <div class="item">
+          {% for item in items %}
+          <article class="-item">
+            <a href="{{ item.link }}" target="_blank">
+              <img
+                src="../static/item_images/{{ (item.type).replace(' ', '+') }}.jpg"
+                alt=""
+              />
+              <div class="info">
+                <!-- <h3>{{ item.type }}</h3> -->
+                <h4>{{ item.price }}</h4>
+
+                {% macro custom_round(value) %} {{ value | int | round }} {%
+                endmacro %} {% macro get_time(tm1, tm2) %} {% set tm_diff = (tm1
+                - tm2) %} {% set days = (tm_diff.days) %} {% set hours =
+                custom_round(tm_diff.seconds/3600) %} {% set minutes =
+                custom_round((tm_diff.seconds/60)%60) %} {{ days }} days {{
+                hours }} hrs {{ minutes }} mins {% endmacro %}
+
+                <p>
+                  {{ get_time(time, item.updated_at) }} Ago
+                </p>
+              </div>
+            </a>
+          </article>
+          {% endfor %}
+
+          <article class="-item">
+            <a href="">
+              <img src="../static/images/poisonous_flame.gif" alt="" />
+              <div class="info">
+                <h3>Poisonous Flame</h3>
+                <h4>Ksh 0 (Free)</h4>
+                <p>0 sec Ago</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <script src="../static/scripts/common.js"></script>
+    <script src="../static/scripts/analysis.js"></script>
+    <script src="../static/scripts/login.js"></script>
+  </body>
+</html>

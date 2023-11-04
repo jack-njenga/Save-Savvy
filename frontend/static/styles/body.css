@@ -1,0 +1,172 @@
+:root {
+    --gradient: linear-gradient(
+        45deg,
+        #d9fcfc,
+        #95d4d4,
+        #76b1b1,
+        #5f8f96
+    );
+    --calm: linear-gradient(
+        45deg,
+        rgb(117, 179, 236),
+        rgb(93, 223, 228),
+        rgb(96, 219, 133)
+    );
+    --footer-gradient: linear-gradient(
+        45deg,
+        rgb(136, 143, 143),
+        rgb(102, 132, 138),
+        rgb(54, 119, 110),
+        rgb(136, 142, 143)
+    );
+}
+
+body {
+    margin: auto;
+    min-height: 100%;
+    background-image: var(--gradient);
+    background-size: 500%;
+    background-position: left;
+    transition: background-position 120s;
+}
+
+body p {
+    /* font-family: Impact; */
+    font-weight: 1;
+    font: oblique 20px Arial;
+    line-height: 2;
+}
+
+h1 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+div.start {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+div.start button#start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 60px;
+    border-radius: 15px;
+    background-image: var(--normal_gradient);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: bold;
+    margin: 100px;
+    opacity: 70%;
+    border: 3px solid black;
+    transition: border 0.5s;
+}
+div.start button#start:hover {
+    border: 3px solid blue;
+    opacity: 100%;
+}
+
+
+/* Start  */
+#signin-form {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    padding: 10px;
+    background-image: var(--calm);
+    border: 1px solid #001aff;
+    border-radius: 10px;
+    box-shadow: 10px 50px 100px black;
+}
+form label {
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #3a1136;
+    box-shadow: 10px 5px 15px black;
+}
+
+
+input, select {
+    margin: 10px;
+}
+
+form button {
+    padding: 10px;
+    margin: 30px;
+    opacity: 80%;
+    color: rgb(28, 58, 28);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 10px 5px 10px black;
+}
+
+form button {
+
+    padding: 10px;
+    width: 80px;
+    background-image: var(--abnornal_gradient);
+    background-size: 600%;
+    background-position: bottom;
+    transition: background-position 1s;
+
+}
+form button:hover {
+    background-position: right;
+}
+
+form input, form select {
+    width: 250px;
+    height: 30px;
+    border: 1px solid rgb(3, 3, 255);
+    font-size: large;
+    border-radius: 7px;
+    background-color: #eafcd5;
+}
+
+div.success-popup {
+    width: 350px;
+    background-image: var(--gradient);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    border: 3px solid rgb(83, 255, 83);
+    color: black;
+    visibility: hidden;
+    transition: transform 1s, top 0.1s;
+}
+div.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+div.success-popup img{
+    width: 130px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 13px 20px black;
+}
+div.success-popup button {
+    padding: 10px;
+    width: 80px;
+    background-image: var(--abnornal_gradient);
+    background-size: 600%;
+    background-position: bottom;
+    transition: background-position 1s;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 26, 255);
+    font-weight: bold;
+}
+div.success-popup button:hover {
+    background-position: right;
+}

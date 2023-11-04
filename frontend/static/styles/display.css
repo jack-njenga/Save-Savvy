@@ -1,0 +1,117 @@
+body {
+    background: white;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background: rgb(228, 228, 228);
+    border-bottom: 1px solid rgb(163, 4, 255);
+}
+
+section form {
+    /* border-radius: 60px; */
+    padding: 0;
+    box-shadow: 0 0 0 0;
+    width: 450px;
+}
+section form * {
+    padding: 3px;
+    margin: 5px;
+    /* border-radius: 60px; */
+}
+
+section form button {
+    height: 32px;
+    box-shadow: 0 0 0 0;
+}
+
+div.items{
+    margin: 5px 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    column-gap: 10px;
+    row-gap: 5px;
+    grid-auto-rows: minmax(200px, auto);
+    align-items: start;
+}
+div.items * {
+    border-radius: 10px;
+    background: rgb(226, 226, 226);
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+div.filter{
+    /* height: 500px; */
+    margin: 0;
+    border: 0;
+    padding-bottom: 30px;
+}
+div.filter * {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+div.filter select {
+    width: 100px;
+    background: white;
+    border: 2px solid rgb(163, 4, 255);
+}
+div.item{
+    background: rgb(192, 192, 192);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+}
+article.-item {
+    color: #000;
+    /* border: 1px solid rgb(163, 4, 255); */
+    width: 100%;
+    cursor: pointer;
+}
+article.-item:hover {
+    box-shadow: 5px 5px 60px rgb(255, 230, 0);
+
+}
+
+article.-item img{
+    width: 100%;
+    object-fit: contain;
+}
+
+article.-item *{
+    margin: 0;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+article.-item h3 {
+    color: #000;
+}
+article.-item h4 {
+    background-color: #dfdfdf;
+    color: rgb(3, 124, 3);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+article.-item p {
+    bottom: 0;
+    font-style: normal;
+    font-weight: bold;
+    background-color: rgb(148, 103, 253);
+    color: white;
+}

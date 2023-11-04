@@ -1,0 +1,15 @@
+div.filter {
+    /* background-image: var(--gradient); */
+}
+div.filter h2 {
+    padding: 20px;
+    color: blue;
+}
+
+div.analysis-filter * {
+    font-family: 'Courier New', Courier, monospace;
+    width: 10%;
+    border-radius: 10px;
+    color: rgb(212, 0, 255);
+    border: 0px solid rgb(212, 0, 255);
+}

@@ -1,0 +1,39 @@
+
+
+footer {
+    background-image: var(--footer-gradient);
+    color: #fff;
+    text-align: center;
+    bottom: 0;
+    border-radius: 5px;
+}
+footer * {
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    transition: color 0.2s;
+}
+
+footer *:hover {
+    color: rgb(53, 53, 255);
+    font-weight: bold;
+}
+
+div#loading-popup {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: var(--gradient);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(255, 2, 255);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+div#loading-popup * {
+    width: 70px;
+    border-radius: 50%;
+}
+
+div.logged-in {
+    text-align: center;
+}

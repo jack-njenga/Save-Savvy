@@ -1,0 +1,135 @@
+body {
+    background: white;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    background: rgb(228, 228, 228);
+    border-bottom: 1px solid rgb(230, 42, 247);
+}
+section form * {
+    padding: 0;
+    margin: 0;
+    border-radius: 60px;
+}
+section form {
+    border-radius: 60px;
+    padding: 0;
+}
+
+section form button {
+    position: absolute;
+    height: 32px;
+    box-shadow: 0 0 0 0;
+}
+
+div.items{
+    /* margin: 5px 5px; */
+    /* padding: 10px; */
+    display: grid;
+    grid-template-rows: 0.3fr 0.5fr 50px 1fr;
+    column-gap: 10px;
+    row-gap: 2px;
+    grid-auto-rows: minmax(200px, auto);
+    align-items: start;
+
+}
+div.items * {
+    background: rgb(226, 226, 226);
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+div.filter{
+    border: 1px solid rgb(255, 3, 242);
+    height: 200px;
+    margin: 0;
+    border: 0;
+}
+div.filter * {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+div.filter input{
+    width: 200px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+div.analysis *{
+    background: none;
+}
+
+div.analysis{
+    /* border: 1px solid rgb(255, 3, 242); */
+    background: rgba(107, 107, 107, 0.726);
+}
+
+div.item{
+    margin-top: 0;
+    background: rgba(173, 173, 173, 0.726);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+}
+
+article.-item {
+    border-radius: 10px;
+    color: #000;
+    border: 2px solid rgb(255, 141, 10);
+    width: 100%;
+    cursor: pointer;
+}
+article.-item:hover {
+    box-shadow: 5px 5px 60px rgb(255, 255, 255);
+
+}
+
+article.-item img{
+    width: 100%;
+    object-fit: contain;
+}
+
+article.-item *{
+    margin: 0;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.3;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+article.-item h3 {
+    color: #000;
+}
+article.-item h4 {
+    background-color: #dfdfdf;
+    color: rgb(3, 124, 3);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+article.-item p {
+    bottom: 0;
+    font-style: normal;
+    font-weight: bold;
+    background-color: rgb(148, 103, 253);
+    color: white;
+}
+
+div.price-time-fig img {
+    width: 100%;
+    height: 100%;
+}
