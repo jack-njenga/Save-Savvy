@@ -1,5 +1,35 @@
 #!/bin/env bash
+if ! [ -d "venv" ]; then
+    echo -e "You dont Have The environment yet\n\t Creating One for you..."
+
+    if ! command -v python3 &> /dev/null; then
+        echo -e "What you don't have even python :(\n\tInstaling python for you.."
+        sudo apt update
+        sudo apt install python3
+        sudo apt install python3.10-venv
+        sudo apt install python3-pip
+    fi
+    if ! command -v gunicorn &> /dev/null; then
+        pip install gunicorn
+    fi
+    if ! command -v mysql &> /dev/null; then
+        echo -e "Installing mysql"
+        sudo apt install mysql-server
+        sudo service mysql start
+        cat backend/savy.sql | mysql -u root -p
+
+    fi
+
+    python3 -m venv venv
+fi
+
 source venv/bin/activate
+if [ -f "requirements.txt" ]; then
+    echo -e "\n\tInstalling requirements Just a sec.."
+    pip install -r requirements.txt
+else
+    echo -e "--E--(ERR) No requirements file Found :( Can't Continue!"
+fi
 # cd backend/ && python3 api/v1/app.py -> (flask)
-cd backend/ && gunicorn -b 0.0.0.0:8000 api.v1.app:app --daemon
-cd ../frontend/ && gunicorn -b 0.0.0.0:8001 app:app --daemon
+cd backend/ && gunicorn -b 0.0.0.0:8001 api.v1.app:app --daemon
+cd ../frontend/ && gunicorn -b 0.0.0.0:8000 app:app --daemon
