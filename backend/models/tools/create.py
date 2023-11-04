@@ -8,11 +8,13 @@ from ..uitem import UItem
 
 import requests, os
 
+
 class Create_Item:
     """
     Create_Item class
     """
     url = ""
+    root = f"{str(os.getcwd()).split('Save-Savvy')[0]}Save-Savvy"
 
     def __init__(self, *args, **kwargs):
         """Initialization"""
@@ -25,7 +27,7 @@ class Create_Item:
                     break
         if not self.url:
             print("--WARN--(WARN): No url Provided While instatiating")
-        pth= "/projects/Savy-Savvy/frontend/static/item_images/"
+        pth= f"{self.root}/frontend/static/item_images/"
         if not os.path.exists(pth):
             os.makedirs(pth)
 
@@ -123,7 +125,7 @@ class Create_Item:
             count = count + 1
 
         tfm = Transformer(id_list)
-        
+
         uitems = tfm.summarize_items(get_dicts=True)
         for item in uitems:
             ui = UItem(**item)

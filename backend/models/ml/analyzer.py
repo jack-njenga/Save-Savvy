@@ -16,12 +16,13 @@ class Analyzer():
     """
     tsfm = None
     df = None
-    root_path = "/projects/Savy-Savvy/frontend/static/figures"
+    cwd = os.getcwd()
+    root = f"{cwd.split('Save-Savvy')[0]}Save-Savvy"
+    root_path = f"{root}/frontend/static/figures"
 
     def __init__(self, *args, **kwargs):
         """Init"""
-        # if not os.path.exists("figures"):
-        #     os.makedirs("figures")
+        print(self.root_path)
         if not os.path.exists(self.root_path):
             os.makedirs(self.root_path)
 
@@ -96,7 +97,6 @@ class Analyzer():
         lim = mx + (mx / 2)
         plt.ylim(0, lim)
         itm = str(list(df['type'])[0]).replace(" ", "_")
-        root = "/mnt/c/GIT/SIZ/Savy-Savvy/frontend/static"
         path = f"{self.root_path}/price_over_time_fig_{itm}-{x}.png"
         plt.savefig(path)
 
@@ -129,7 +129,6 @@ class Analyzer():
         g.add_legend(title="Price Columns")
 
         itm = str(list(df['type'])[0]).replace(" ", "_")
-        root = "/mnt/c/GIT/SIZ/Savy-Savvy/frontend/static"
         path = f"{self.root_path}/violin_price_range_{itm}.png"
         plt.savefig(path)
 

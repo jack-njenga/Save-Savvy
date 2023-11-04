@@ -14,6 +14,7 @@ sns = sbn
 
 class Transformer():
     """
+    Makes the transformation and matrix multiplication stuff to the data
     """
     all_items = []
     iitem = ""
@@ -40,9 +41,6 @@ class Transformer():
         else:
             self.all_items = self.iitem.get_all_items()
         self.to_df(return_=False)
-
-        if not os.path.exists("figures"):
-            os.makedirs("figures")
 
     def to_df(self, return_=True):
         """

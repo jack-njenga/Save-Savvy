@@ -2,8 +2,9 @@
 """
 This is the app.py file where the program starts exceting
 """
-import sys
-sys.path.append("/projects/Savy-Savvy/backend")
+import sys, os
+root = f"{str(os.getcwd()).split('Save-Savvy')[0]}Save-Savvy"
+sys.path.append(f"{root}/backend")
 from models.item import Item
 from models.uitem import UItem
 from models.ml.transformer import Transformer

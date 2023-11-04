@@ -33,6 +33,7 @@ anl = Analyzer()
 # path = anl.get_price_over_time_fig(item="jikokoa xtra")
 # path = anl.get_price_range(item="jikokoa xtra")
 df = anl.get_df()
+print(df)
 print(df.columns)
 
 
