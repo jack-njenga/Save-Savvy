@@ -98,7 +98,7 @@ class Create_Item:
                 if count == 3:
                     if "image" in list(data.keys()):
                         _item = str(data['type']).replace(" ", "+")
-                        fl = f"/projects/Savy-Savvy/frontend/static/item_images/{_item}.jpg"
+                        fl = f"{self.root}/frontend/static/item_images/{_item}.jpg"
                         response = requests.get(data["image"])
                         if response.status_code == 200:
                             with open(fl, "wb") as f:
