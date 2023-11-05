@@ -84,6 +84,7 @@ class Create_Item:
                 return
 
         count = 0
+        ct = 3
         jumia = Jumia()
         content = jumia.make_request(self.url)
         scrape = Scrape(content)
@@ -95,7 +96,9 @@ class Create_Item:
                 if count == 0:
                     if "price" in list(data.keys()):
                         avg_prc = int(str(data["price"].split(" ")[1]).replace(",", ""))
-                if count == 3:
+                if len(count) < 3:
+                    ct = 1
+                if count == ct:
                     if "image" in list(data.keys()):
                         _item = str(data['type']).replace(" ", "+")
                         fl = f"{self.root}/frontend/static/item_images/{_item}.jpg"
