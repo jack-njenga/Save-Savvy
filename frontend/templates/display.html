@@ -67,7 +67,7 @@
             {% for item in items %}
               <article class="-item">
                 <a href="http://164.90.136.53:5000/display/{{ (item.type).replace(' ', '+') }}">
-                  <img src="../static/item_images/{{ (item.type).replace(' ', '+') }}.jpg" alt="">
+                  <img src="../static/item_images/{{ (item.type).replace(' ', '+') }}.jpg" alt=" {{ item.type }} Image">
                   <div class="info">
                     <h3>{{ item.type }}</h3>
 
