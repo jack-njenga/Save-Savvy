@@ -5,9 +5,6 @@
 import sys
 sys.path.extend([".", "../", "../../", "../../../", "../../../../"])
 
-print(sys.executable)
-print(sys.path)
-
 # from models import *
 from os import getenv
 from flask import Flask, render_template, make_response, jsonify

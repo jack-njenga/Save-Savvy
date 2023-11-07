@@ -24,3 +24,16 @@ article * {
     justify-content: center;
     text-align: center;
 }
+article *:hover {
+    color: rgb(255, 0, 0);
+}
+
+div.about-me * {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+a#connect :hover {
+    color: red;
+}

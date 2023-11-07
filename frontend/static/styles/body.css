@@ -52,6 +52,11 @@ div.start {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+
+    background-image: url(../images/price-drop.jpg);
+    background-repeat: no-repeat;
+    background-size: 600px ;
+    background-position: center bottom;
 }
 
 div.start button#start {
@@ -174,4 +179,24 @@ div.success-popup button {
 }
 div.success-popup button:hover {
     background-position: right;
+}
+
+div.story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.story * {
+    margin-top: 10px;
+    padding: 5px;
+}
+div.story img {
+    display: flex;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
 }
