@@ -1,4 +1,4 @@
-# <a href="doc:introduction" target="_blank">Introduction</a>
+# <a href="doc:introduction" target="_blank">Save-Savvy</a>
 ## Guiding Sales Decisions with Price Tracking
 
 ### This is a project of a simple web aplication thats main goal is to track ecomerce products prices over time. It will give you insights on the price flacuations to make better decission on when and how to buy or sell products
@@ -16,7 +16,7 @@
 - [ ] ML integration
 
 
-#### Check out our [Product](http://164.90.136.53:5000/){:target="_blank"}
+#### Check out our <a href="doc:introduction" target="_blank">Product</a>
 
 
 #endif
