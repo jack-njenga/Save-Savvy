@@ -79,6 +79,7 @@ class DBStorage():
 
     def get_uitems_by_type(self, type=""):
         """
+        Returns all unique items given the type
         """
         all_unqs = self.__session.query(UItem).filter(UItem.type == type).all()
         return all_unqs[0]
@@ -107,7 +108,6 @@ class DBStorage():
                 uits.append(all_unqs[0])
 
         # print(its[0].to_dict())
-
         # items = self.__session.query(UItem).all()
 
         return uits

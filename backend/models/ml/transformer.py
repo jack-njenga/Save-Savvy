@@ -22,6 +22,7 @@ class Transformer():
 
     def __init__(self, *args, **kwargs):
         """
+        Initialization
         """
         self.iitem = Item()
         if args:
@@ -57,6 +58,9 @@ class Transformer():
             return self.main_df
 
     def clean_df(self, df=main_df):
+        """
+        Cleans the dataframe
+        """
         try:
             df["created_at"] = pd.to_datetime(df["created_at"])
             df["updated_at"] = pd.to_datetime(df["updated_at"])
@@ -74,6 +78,9 @@ class Transformer():
         return df
 
     def get_item_df(self, col=""):
+        """
+        Returns the new item df from the item table
+        """
         df = self.main_df
         item_df = pd.DataFrame()
         cols = ["id", "type", "price", "created_at", "updated_at"]
@@ -92,6 +99,9 @@ class Transformer():
         return item_df
 
     def transform_prices(self, df=pd.DataFrame()):
+        """
+        Transforms the dataframe by adding new coulumns
+        """
         new_dict = {}
 
         new_dict["type"] = df["type"][0]
@@ -124,7 +134,9 @@ class Transformer():
         return items
 
     def summarize_items(self, items=[], get_dicts=False):
-        """..."""
+        """
+        Summarizes the items and retruns the new syummirized df
+        """
         df = self.main_df
         new_df = pd.DataFrame()
         item_list = []

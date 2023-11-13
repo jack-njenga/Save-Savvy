@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+init
+"""
 from flask import Blueprint
 
 endpoints = Blueprint("endpoints", __name__, url_prefix="/api/v1")

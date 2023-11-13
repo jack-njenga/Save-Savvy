@@ -44,10 +44,15 @@ class Analyzer():
         return df
 
     def get_df(self):
+        """
+        returns the dataframe
+        """
         return self.df
 
     def get_all_times(self, item):
-        """..."""
+        """
+        Returns all the times
+        """
         xs = ["year", "month", "day", "hour", "minute"]
         for x in xs:
             path = self.get_price_over_time_fig(item=item, x=x)
