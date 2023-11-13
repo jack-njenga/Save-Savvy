@@ -21,6 +21,7 @@ class User(BaseModel, Base):
 
     def __init__(self, *args, **kwargs):
         """
+        initialization
         """
         super().__init__(*args, **kwargs)
 
